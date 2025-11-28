@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purrfect Match Cat Adoption</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <i class="fas fa-paw cat-paw paw-1"></i>
+        <i class="fas fa-paw cat-paw paw-2"></i>
+        
+        <h1>Application Form</h1>
+        <p class="intro-text">Thank you for considering adopting a cat! Please fill out this form to help us match you with your ideal feline companion.</p>
+        
+        <form id="adoptionForm" method="POST" action="./submit_form.php">
+            <div class="form-section">
+                <h3 class="form-section-title">Your Information</h3>
+                
+                <div class="form-group" style="animation-delay: 0.1s">
+                    <label for="fullName" class="required">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required placeholder="John Doe">
+                </div>
+
+                <div class="form-group" style="animation-delay: 0.2s">
+                    <label for="email" class="required">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                </div>
+
+                <div class="form-group" style="animation-delay: 0.4s">
+                    <label for="contactNumber" class="required">Contact Number</label>
+                    <input type="tel" id="contactNumber" name="contactNumber" required placeholder="(123) 456-7890">
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h3 class="form-section-title">Living Situation</h3>
+                
+                <div class="form-group" style="animation-delay: 0.5s">
+                    <label class="required">Type of Residence</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="residenceOwned" name="residenceType" value="owned" required>
+                            <label for="residenceOwned">Owned</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="residenceRented" name="residenceType" value="rented">
+                            <label for="residenceRented">Rented</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group" style="animation-delay: 0.6s">
+                    <label for="timeSpent" class="required">Where will the cat spend most of their time?</label>
+                    <select id="timeSpent" name="timeSpent" required>
+                        <option value="">Select an option</option>
+                        <option value="indoors">Indoors only</option>
+                        <option value="outdoors">Outdoors only</option>
+                        <option value="both">Both indoors and outdoors</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h3 class="form-section-title">Cat Care</h3>
+                
+                <div class="form-group" style="animation-delay: 0.7s">
+                    <label class="required">Do you have any other pets?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="petsYes" name="otherPets" value="yes" required>
+                            <label for="petsYes">Yes</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="petsNo" name="otherPets" value="no">
+                            <label for="petsNo">No</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group" style="animation-delay: 0.8s">
+                    <label class="required">Do you have any allergies to cats?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="allergiesYes" name="allergies" value="yes" required>
+                            <label for="allergiesYes">Yes</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="allergiesNo" name="allergies" value="no">
+                            <label for="allergiesNo">No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h3 class="form-section-title">Commitment</h3>
+                
+                <div class="form-group" style="animation-delay: 0.9s">
+                    <label class="required">Are you 18 years of age or older?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="ageYes" name="ageVerification" value="yes" required>
+                            <label for="ageYes">Yes</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="ageNo" name="ageVerification" value="no">
+                            <label for="ageNo">No</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group" style="animation-delay: 1s">
+                    <label class="required">Are you prepared to commit to caring for a pet for 15-20 years?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="commitYes" name="commitment" value="yes" required>
+                            <label for="commitYes">Yes</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="commitNo" name="commitment" value="no">
+                            <label for="commitNo">No</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="commitUnsure" name="commitment" value="unsure">
+                            <label for="commitUnsure">Unsure</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h3 class="form-section-title">Additional Information</h3>
+                
+                <div class="form-group" style="animation-delay: 1.1s">
+                    <label for="additionalInfo">Is there anything else you think we should know?</label>
+                    <textarea id="additionalInfo" name="additionalInfo" placeholder="Please share any other relevant information about your home, lifestyle, or the type of cat you're looking for..."></textarea>
+                </div>
+
+                <div class="form-group" style="animation-delay: 1.2s">
+                    <label for="fosterName">Name of foster person you are adopting from (if known)</label>
+                    <input type="text" id="fosterName" name="fosterName" placeholder="If you're adopting from a specific foster home, please let us know">
+                </div>
+            </div>
+            
+            <button type="submit" class="btn-submit" style="animation-delay: 1.3s">
+                <i class="fas fa-paper-plane"></i> Submit Application
+            </button>
+        </form>
+        
+        <div class="success-message" id="successMessage">
+            <i class="fas fa-check-circle"></i>
+            <h2>Application Submitted!</h2>
+            <p>Thank you for your application. We'll review your information and get back to you soon.</p>
+            <p>In the meantime, check out our <a href="#" style="color: var(--primary); text-decoration: underline;">cat care resources</a> to prepare for your new feline friend!</p>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <a href="https://wa.me/19209578397" class="whatsapp-link" target="_blank">
+                    <i class="fab fa-whatsapp"></i> +1 920-957-8397
+                </a>
+                <a href="mailto:kittiesfosterhub@gmail.com">
+                    <i class="fas fa-envelope"></i> kittiesfosterhub@gmail.com
+                </a>
+            </div>
+            
+            <p class="footer-text">
+                © 2025 Adoption form. All rights reserved.<br>
+                Every cat deserves a loving home.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('adoptionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Hide form and show success message
+            document.getElementById('adoptionForm').style.display = 'none';
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Scroll to success message
+            document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
+            
+            // In a real application, you would send the form data to a server here
+            // For example:
+            // const formData = new FormData(this);
+            // fetch('/submit-application', {
+            //     method: 'POST',
+            //     body: formData
+            // })
+            // .then(response => response.json())
+            // .then(data => {
+            //     document.getElementById('adoptionForm').style.display = 'none';
+            //     document.getElementById('successMessage').style.display = 'block';
+            // })
+            // .catch(error => {
+            //     alert('There was an error submitting your form. Please try again.');
+            // });
+        });
+        
+        // Add animation delays to form groups
+        document.addEventListener('DOMContentLoaded', function() {
+            const formGroups = document.querySelectorAll('.form-group');
+            formGroups.forEach((group, index) => {
+                group.style.animationDelay = `${index * 0.1 + 0.1}s`;
+            });
+        });
+    </script>
+    <script src="./submit_form.js"></script>
+</body>
+</html>
